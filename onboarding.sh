@@ -18,6 +18,16 @@ mv .kubectl_aliases .zshrc ~/
 Echo "Installing Golang..."
 brew install go 
 mkdir -p ~/go/src/git.obsec.run/backend
+Echo "Installing erlang..."
+brew install erlang
+brew install rebar3
+Echo "Installing Scala..."
+brew install scala
+Echo "Installing Node..."
+brew install node 
+Echo "Installing tmux..."
+brew install tmux
+mv .tmux.conf ~/
 Echo "Installing Docker..."
 brew cask install docker
 pip install docker-compose
