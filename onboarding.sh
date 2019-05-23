@@ -12,6 +12,7 @@ brew install zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 Echo "currently using version $(zsh --version | awk '{print $1 $2}') upgrading..."
 upgrade_oh_my_zsh
+git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
 mv kube-ps1.sh /usr/local/opt/kube-ps1/share/
 mv .kubectl_aliases .zshrc ~/
 Echo "Installing Golang..."
