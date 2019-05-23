@@ -17,6 +17,7 @@ mv kube-ps1.sh /usr/local/opt/kube-ps1/share/
 mv .kubectl_aliases .zshrc ~/
 Echo "Installing Golang..."
 brew install go 
+mkdir -p ~/go/src/git.obsec.run/backend
 Echo "Installing Docker..."
 brew cask install docker
 pip install docker-compose
