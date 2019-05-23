@@ -5,7 +5,7 @@
 export PATH=~/.cache/rebar3/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="~/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Kubectl Aliases
 [ -f ~/.kubectl_aliases ] && source ~/.kubectl_aliases
@@ -17,7 +17,7 @@ export KUBECONFIG=$KUBECONFIG:~/.kube/config:~/.kube/config-shared.pdx1.aws.dev:
 export BACKEND="$HOME/go/src/git.obsec.run/backend"
 export DEVOPS="$HOME/go/src/git.obsec.run/devops"
 export DATASCIENCE="$HOME/go/src/git.obsec.run/datascience"
-export DATAPLATFORM="$HOME/go/src/git.obsec.run/devops"
+export DATAPLATFORM="$HOME/go/src/git.obsec.run/dataplatform"
 export RETRIEVERS="$HOME/go/src/git.obsec.run/retrievers"
 
 source "/usr/local/opt/kube-ps1/share/kube-ps1.sh"
@@ -53,6 +53,12 @@ export DEV_CONFIGS="$GOPATH/src/git.obsec.run/.dev"
 plugins=(
   git
 )
+
+export TERM="xterm-256color"
+POWERLEVEL9K_BATTERY_STAGES="▁▂▃▄▅▆▇█"
+ZSH_THEME="powerlevel9k/powerlevel9k"
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history time battery)
 
 source ~/.bash_profile_gpg_conf
 source $ZSH/oh-my-zsh.sh
