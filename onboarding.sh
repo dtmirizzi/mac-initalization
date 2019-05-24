@@ -10,7 +10,7 @@ mv .kubectl_aliases .zshrc ~/
 mv .tmux.conf ~/
 
 declare -a taps=()
-declare -a casks=("iterm2" "docekr" "visual-studio-code")
+declare -a casks=("iterm2" "docker" "visual-studio-code")
 declare -a beers=("go" "erlang" "rebar3" "scala" "node" "tmux" "kubernetes-cli" "kubernetes-helm" "zsh")
 declare -a pips=("docker-compose" "aws")
 
