@@ -17,7 +17,7 @@ declare -a pips=("docker-compose" "aws")
 for p in "${pips[@]}"
 do
     echo "installing $p ..."
-    brew install $p
+    pip install $p
 done
 
 Echo "Installing aws login helper"
@@ -27,13 +27,13 @@ aws-login-helper.py
 for t in "${taps[@]}"
 do
     echo "installing $t ..."
-    brew install $t
+    brew tap $t
 done
 
 for c in "${casks[@]}"
 do
     echo "installing $c ..."
-    brew install $c
+    brew cask install $c
 done
 
 for b in "${beers[@]}"
