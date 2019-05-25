@@ -20,10 +20,6 @@ do
     pip install $p
 done
 
-Echo "Installing aws login helper"
-curl -L -o /tmp/aws-login-helper.zip https://git.obsec.run/jturpin/eks-login-helper/-/archive/master/eks-login-helper-master.zip && pip3 install /tmp/aws-login-helper.zip --upgrade
-aws-login-helper.py
-
 for t in "${taps[@]}"
 do
     echo "installing $t ..."
