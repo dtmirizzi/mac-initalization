@@ -22,18 +22,6 @@ dockerClean () {
   docker system prune -f
 }
 
-#K8 and helm env switching 
-alias env-qe="useKubeConfig qe && useHelmCerts qe"
-alias env-live="useKubeConfig live && useHelmCerts live"
-alias env-dev="useKubeConfig dev && useHelmCerts dev"
-alias env-local="kubectl config use-context docker-for-desktop"
-useKubeConfig() {
-  kubectl config use-context shared.pdx1.aws.$1
-}
-useHelmCerts() {
-  cp ~/.helm/certs/$1/*.pem ~/.helm
-} 
-
 # GOPATH
 export PATH=$PATH:$HOME/go/bin
 export GOPATH="$HOME/go"
