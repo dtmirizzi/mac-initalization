@@ -39,8 +39,6 @@ export PATH=$PATH:$HOME/go/bin
 export GOPATH="$HOME/go"
 export GOROOT=/usr/local/opt/go/libexec
 
-export DEV_CONFIGS="$GOPATH/src/git.obsec.run/.dev"
-
 plugins=(
   git
 )
