@@ -11,15 +11,6 @@ export ZSH="$HOME/.oh-my-zsh"
 [ -f ~/.kubectl_aliases ] && source ~/.kubectl_aliases
 function kubectl() { echo "+ kubectl $@"; command kubectl $@; }
 
-export KUBECONFIG=$KUBECONFIG:~/.kube/config:~/.kube/config-shared.pdx1.aws.dev:~/.kube/config-shared.pdx1.aws.ops:~/.kube/config-shared.pdx1.aws.qe:~/.kube/config-shared.pdx1.aws.live
-
-# Common repo aliases (Currently setup in gopath)
-export BACKEND="$HOME/go/src/git.obsec.run/backend"
-export DEVOPS="$HOME/go/src/git.obsec.run/devops"
-export DATASCIENCE="$HOME/go/src/git.obsec.run/datascience"
-export DATAPLATFORM="$HOME/go/src/git.obsec.run/dataplatform"
-export RETRIEVERS="$HOME/go/src/git.obsec.run/retrievers"
-
 source "/usr/local/opt/kube-ps1/share/kube-ps1.sh"
 PS1='$(kube_ps1)'$PS1
 
@@ -57,5 +48,4 @@ plugins=(
 export TERM="xterm-256color"
 ZSH_THEME="robbyrussell"
 
-source ~/.bash_profile_gpg_conf
 source $ZSH/oh-my-zsh.sh
